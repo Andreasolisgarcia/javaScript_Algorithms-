@@ -1,4 +1,6 @@
 # README
+## 2.1. Sujet 1
+Avec une liste de nombres entiers relatifs et un nombre k, crée une méthode retournant un booléen qui affiche si deux nombres de cette liste ont k comme résultat de leur somme.
 
 Ceci est un ensemble de défis de programmation qui impliquent de résoudre différents problèmes en utilisant différentes algorithmes et des contraintes de complexité temporelle. Les défis sont décrits ci-dessous.
 
