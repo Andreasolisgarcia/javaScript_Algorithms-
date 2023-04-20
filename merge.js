@@ -30,14 +30,22 @@ try {
 }
 
 const splitData = data.split("\n");
-intArray = splitData.map((str) => parseInt(str));
-for (const str of splitData) {
-  const num = parseInt(str);
-  if (!num && num !== 0) {
-    throw new Error(`Invalid number: ${str}`);
+const intArray = []
+try {
+  for (const num of splitData) {
+    if (/^[0-9]+$/.test(num)) {
+      intArray.push(parseInt(num));
+    } else {
+      throw new Error("Invalid input");
+    }
   }
-  intArray.push(num);
+} catch (error) {
+  console.error("\x1b[31m%s\x1b[0m", `Error: ${error.message}. Please provide the correct input (only numbers).`);
+  process.exit(1);
 }
+
+
+
 
 
 let count = 0

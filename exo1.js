@@ -36,7 +36,19 @@ try {
 }
 
 const splitData = data.split("\n");
-const intArray = splitData.map((str) => parseInt(str));
+const intArray = []
+try {
+  for (const num of splitData) {
+    if (/^[0-9]+$/.test(num)) {
+      intArray.push(parseInt(num));
+    } else {
+      throw new Error("Invalid input");
+    }
+  }
+} catch (error) {
+  console.error("\x1b[31m%s\x1b[0m", `Error: ${error.message}. Please provide the correct input (only numbers).`);
+  process.exit(1);
+}
 
 const sumCheck = (array, k) => {
   var boolean = false;
