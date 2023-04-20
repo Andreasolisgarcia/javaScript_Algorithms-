@@ -8,6 +8,10 @@ if (process.argv.length < 3) {
     console.error("\x1b[31m%s\x1b[0m", "Error: Please provide a filename as an argument.");
   return;
 }
+if (fileName != 'exo3.js') {
+  console.error("\x1b[31m%s\x1b[0m", "Error: Please provide the correct filename");
+return;
+}
 
 // No k provided
 if (process.argv.length < 4) {

@@ -4,9 +4,14 @@ const fileName = process.argv[2];
 const K = process.argv[3];
 
 // No name provited
-if (process.argv.length < 3) {
+if (process.argv.length < 3 ) {
     console.error("\x1b[31m%s\x1b[0m", "Error: Please provide a filename as an argument.");
   return;
+}
+
+if (fileName != 'exo1.js') {
+  console.error("\x1b[31m%s\x1b[0m", "Error: Please provide the correct filename");
+return;
 }
 
 // No k provided
@@ -55,3 +60,4 @@ const array = intArray;
 const result = sumCheck(array, K);
 const outputString = `\x1b[34mBoolean:\x1b[0m ${result.boolean}\n\x1b[35mNumbers:\x1b[0m ${JSON.stringify(result.numbers)}`;
 console.log(outputString);
+// node exo1.js wtf.txt
