@@ -24,6 +24,7 @@ fs.access(filePath, fs.constants.F_OK, (err) => {
     console.error("\x1b[31m%s\x1b[0m", "Error: File not found");
     return;
   }
+  console.log("\x1b[36m" + "intArray data from " + fileName + "\x1b[0m");
 });
 
 // Méthode synchrone
