@@ -9,7 +9,7 @@ if (process.argv.length < 3 ) {
   return;
 }
 
-if (fileName != 'exo1.js') {
+if (fileName != 'wtf.txt') {
   console.error("\x1b[31m%s\x1b[0m", "Error: Please provide the correct filename");
 return;
 }

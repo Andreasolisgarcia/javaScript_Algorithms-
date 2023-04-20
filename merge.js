@@ -7,7 +7,7 @@ if (process.argv.length < 3) {
     console.error("\x1b[31m%s\x1b[0m", "Error: Please provide a filename as an argument.");
   return;
 }
-if (fileName != 'merge.js') {
+if (fileName != 'wtf.txt') {
   console.error("\x1b[31m%s\x1b[0m", "Error: Please provide the correct filename");
 return;
 }
@@ -31,6 +31,15 @@ try {
 
 const splitData = data.split("\n");
 intArray = splitData.map((str) => parseInt(str));
+for (const str of splitData) {
+  const num = parseInt(str);
+  if (!num && num !== 0) {
+    throw new Error(`Invalid number: ${str}`);
+  }
+  intArray.push(num);
+}
+
+
 let count = 0
 const merge = (left, right) => {
   let result = [];
