@@ -7,6 +7,10 @@ if (process.argv.length < 3) {
     console.error("\x1b[31m%s\x1b[0m", "Error: Please provide a filename as an argument.");
   return;
 }
+if (fileName != 'merge.js') {
+  console.error("\x1b[31m%s\x1b[0m", "Error: Please provide the correct filename");
+return;
+}
 
 // Check if the file exists
 fs.access(filePath, fs.constants.F_OK, (err) => {
